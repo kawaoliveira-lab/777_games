@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+	font-family: 'DM Sans', sans-serif;
+	color: #222b26;
+	background: #f6f7f2;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	--paper: #f6f7f2;
+	--ink: #222b26;
+	--muted: #727a70;
+	--green: #265a43;
+	--lime: #d7ed7b;
+	--line: #e2e5dc;
+	--serif: 'Space Grotesk', sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #86a93b; outline-offset: 3px; }
+::selection { background: var(--lime); color: var(--ink); }
