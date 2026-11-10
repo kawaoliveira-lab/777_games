@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missão do Saber</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍄 Missão do Saber</h1>
+    <p>10 mundos, monstros, moedas e desafios educativos!</p>
+  </header>
+
+  <main>
+    <div class="top">
+      <div class="hud">
+        <span>⭐ <b id="score">0</b></span>
+        <span>❤️ <b id="lives">3</b></span>
+        <span>🪙 <b id="coins">0</b></span>
+        <span>🌎 Fase <b id="level">1/10</b></span>
+      </div>
+      <button id="shopOpen" class="shop">🛒 Loja de skins</button>
+    </div>
+
+    <div class="frame">
+      <canvas id="game" width="960" height="540"></canvas>
+
+      <section id="startScreen" class="overlay">
+        <div class="panel">
+          <div class="emoji">🌟🍄</div>
+          <h2>MISSÃO DO SABER</h2>
+          <p>Explore 10 mundos, pule monstros, colete moedas e compre 5 skins!</p>
+          <p><b>Quando morrer:</b> responda uma pergunta inédita. Se acertar, revive. Se errar, começa do início.</p>
+          <p class="small">Mover: ← → ou A/D · Pular: Espaço, ↑ ou W</p>
+          <button id="startBtn">COMEÇAR</button>
+        </div>
+      </section>
+
+      <section id="questionScreen" class="overlay hidden">
+        <div class="panel">
+          <div class="emoji">🧠</div>
+          <p class="tag">PERGUNTA SURPRESA</p>
+          <h2 id="questionText"></h2>
+          <div id="answers" class="answers"></div>
+          <p id="feedback"></p>
+          <button id="questionContinue" class="hidden">CONTINUAR</button>
+          <p id="questionCount" class="small"></p>
+        </div>
+      </section>
+
+      <section id="shopScreen" class="overlay hidden">
+        <div class="panel shopPanel">
+          <div class="shopHead">
+            <h2>🛒 Loja de skins</h2>
+            <button id="shopClose" class="close">✕</button>
+          </div>
+          <p>Moedas: <b id="shopCoins">0</b> 🪙</p>
+          <div id="skinGrid" class="skins"></div>
+        </div>
+      </section>
+
+      <section id="levelScreen" class="overlay hidden">
+        <div class="panel">
+          <div class="emoji">🚩</div>
+          <h2 id="levelTitle">Fase concluída!</h2>
+          <p id="levelMessage"></p>
+          <button id="nextLevelBtn">PRÓXIMA FASE</button>
+        </div>
+      </section>
+
+      <section id="endScreen" class="overlay hidden">
+        <div class="panel">
+          <div class="emoji">🏆</div>
+          <h2 id="endTitle"></h2>
+          <p id="endMessage"></p>
+          <p id="finalScore"></p>
+          <button id="restartBtn">JOGAR NOVAMENTE</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="mobile">
+      <button id="left">◀</button>
+      <button id="jump">⬆ PULAR</button>
+      <button id="right">▶</button>
+    </div>
+
+    <section class="help">
+      <h3>🎮 Como jogar</h3>
+      <p>Ande e pule pelas plataformas. Pule em cima dos monstros para derrotá-los. Pegue moedas para comprar skins e chegue à bandeira para avançar. Ao morrer, acerte a pergunta para reviver; se errar, recomeça na fase 1.</p>
+    </section>
+  </main>
+
+  <footer>Projeto educativo escolar · Jogo original de plataforma</footer>
+  <script src="game.js"></script>
+</body>
+</html>
